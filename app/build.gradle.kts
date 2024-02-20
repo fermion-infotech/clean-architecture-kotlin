@@ -178,8 +178,23 @@ dependencies {
     implementation ("net.zetetic:android-database-sqlcipher:$cipherVersion")
 
 
+    /**
+     * Compose related component
+     */
     implementation("androidx.activity:activity-compose:1.8.2")
     implementation("androidx.compose.material3:material3:1.2.0")
+
+    /**
+     * Circle image view component
+     */
+    val circleImageView = "3.1.0"
+    implementation("de.hdodenhof:circleimageview:$circleImageView")
+
+    /**
+     * Glide component
+     */
+    val glide = "4.16.0"
+    implementation("com.github.bumptech.glide:glide:$glide")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
