@@ -24,6 +24,7 @@
         </activity>
 
         <activity
+            android:theme="@style/ActionBarFromAppTheme"
             android:name=".presentation.view.main.MainActivity"
             android:exported="false" />
     </application>

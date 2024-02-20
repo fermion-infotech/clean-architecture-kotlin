@@ -8,4 +8,13 @@
     <string name="from_facebook_iv">from facebook imageview</string>
     <string name="enter_your_phone_number">Enter your phone number</string>
     <string name="whatsapp_will_need_to_verify">WhatsApp will need to verify your phone number. <font color="#0C42CC">What’s \nmy number?</font></string>
+    <string name="_91"><font color="#000" ><u>+91</u></font></string>
+    <string name="enter_mobile_number">Enter mobile number</string>
+    <string-array name="country_codes_array">
+        <item>India</item>
+        <item>USA</item>
+        <item>UK</item>
+        <item>China</item>
+    </string-array>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

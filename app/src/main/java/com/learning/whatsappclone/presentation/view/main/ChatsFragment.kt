@@ -10,7 +10,9 @@ import com.learning.whatsappclone.data.utils.Resource
 import com.learning.whatsappclone.databinding.FragmentChatsBinding
 import com.learning.whatsappclone.presentation.viewmodel.MainViewModel
 import com.learning.whatsappclone.presentation.widget.loader.LoaderUtil
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ChatsFragment : Fragment() {
 
     private val mainViewModel: MainViewModel by viewModels()
