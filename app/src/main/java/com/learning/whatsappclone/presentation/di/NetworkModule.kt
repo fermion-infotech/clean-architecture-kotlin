@@ -30,13 +30,12 @@ class NetworkModule {
     @Singleton
     fun provideRetrofitInstance(): Retrofit {
         val loggingInterceptor = HttpLoggingInterceptor().apply {
-            level = HttpLoggingInterceptor.Level.BODY
+            level = if (BuildConfig.FLAVOR != "prod") HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE
         }
 
         val okHttpClient = OkHttpClient
             .Builder()
             .certificatePinner(certificatePinning)
-            .addInterceptor(loggingInterceptor)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
             .connectTimeout(30, TimeUnit.SECONDS)
@@ -45,6 +44,7 @@ class NetworkModule {
                     chain.request().newBuilder().addHeader("accept", "application/json").build()
                 return@addInterceptor chain.proceed(request)
             }
+            .addInterceptor(loggingInterceptor)
             .build()
 
         return Retrofit.Builder().baseUrl(BuildConfig.baseUrl)
